@@ -211,11 +211,11 @@ function cetakNota(){
 
   if(Object.keys(kiloanData).length>0){
     lines.push("KILOAN");
-    lines.push("Jenis        Kg Harga   Total");
+    lines.push("Jenis       Kg   Harga   Total");
     for(let kat in kiloanData){
       lines.push(`-${kat}`);
       kiloanData[kat].forEach(item=>{
-        lines.push(`${item.jenis.padEnd(12)}${item.kg}  ${formatRibuan(item.harga)}   ${formatRibuan(item.total)}`);
+        lines.push(`${item.jenis.padEnd(12)}${item.kg}kg  ${formatRibuan(item.harga)}   ${formatRibuan(item.total)}`);
       });
     }
     lines.push("--------------------------------");
@@ -238,7 +238,7 @@ function cetakNota(){
     lines.push("SATUAN");
     lines.push("Item        Pot Harga   Total");
     satuanData.forEach(item=>{
-      lines.push(`${item.jenis.padEnd(12)}${item.qty}  ${formatRibuan(item.harga)}   ${formatRibuan(item.total)}`);
+      lines.push(`${item.jenis.padEnd(12)}${item.qty}   ${formatRibuan(item.harga)}   ${formatRibuan(item.total)}`);
     });
     lines.push("--------------------------------");
   }

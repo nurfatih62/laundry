@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NUR LAUNDRY - Kasir</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <img src="logo.png" class="logo" alt="logo">
+  <div class="brand">NUR LAUNDRY</div>
+</header>
+
+<main class="container">
+
+  <!-- Data Pelanggan -->
+  <section class="card">
+    <h3>Data Pelanggan</h3>
+    <label>Nama Pelanggan</label>
+    <input id="nama" type="text" placeholder="Nama pelanggan">
+
+    <label>Alamat / No HP</label>
+    <input id="alamat" type="text" placeholder="Alamat atau No HP">
+
+    <label>Nama Kasir</label>
+    <input id="kasir" type="text" placeholder="Nama kasir">
+
+    <div class="row">
+      <div class="col">
+        <label>Tanggal Masuk</label>
+        <input id="tglMasuk" type="date">
+      </div>
+
+      <div class="col paket-container">
+        <label>Pilih Paket</label>
+        <div class="paket-group">
+          <label><input type="checkbox" id="kilat"> Kilat-8J</label>
+          <button type="button" class="paket-btn" data-hari="1" id="cling">Cling-1H</button>
+          <button type="button" class="paket-btn" data-hari="2" id="hemat2">Hema-2H</button>
+          <button type="button" class="paket-btn" data-hari="3" id="hemat3">Hemat-3H</button>
+        </div>
+      </div>
+
+      <div class="col">
+        <label>Estimasi Selesai</label>
+        <input id="tglJadi" type="date">
+      </div>
+    </div>
+
+    <label>Catatan / Keterangan</label>
+    <textarea id="keterangan" placeholder="Catatan tambahan..."></textarea>
+  </section>
+
+  <!-- Kiloan -->
+  <section class="card">
+    <h3>Kiloan</h3>
+    <div class="table-wrap">
+      <table id="tabelKiloan">
+        <thead>
+          <tr>
+            <th>Kategori</th>
+            <th>Jenis</th>
+            <th>Kg</th>
+            <th>Harga/Kg</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="controls">
+      <button type="button" class="btn" id="addKiloBtn">Tambah Kiloan</button>
+    </div>
+  </section>
+
+  <!-- Satuan -->
+  <section class="card">
+    <h3>Satuan</h3>
+    <div class="table-wrap">
+      <table id="tabelSatuan">
+        <thead>
+          <tr>
+            <th>Jenis</th>
+            <th>Potong</th>
+            <th>Harga</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="controls">
+      <button type="button" class="btn" id="addSatuanBtn">Tambah Satuan</button>
+    </div>
+  </section>
+
+  <!-- Biaya & Pembayaran -->
+  <section class="card">
+    <h3>Biaya & Pembayaran</h3>
+    <label>Biaya Ongkir (Rp)</label>
+    <input id="ongkir" type="number" placeholder="">
+
+    <label>BB Sebelumnya (Rp)</label>
+    <input id="hutangSebelumnya" type="number" placeholder="">
+
+    <label>Saldo/DP (Rp)</label>
+    <input id="saldo" type="number" placeholder="">
+
+    <div class="row">
+      <div class="col">
+        <label>Total (Rp)</label>
+        <input id="total" type="number" readonly>
+      </div>
+      <div class="col">
+        <label>Kurang (Rp)</label>
+        <input id="sisa" type="number" readonly>
+      </div>
+    </div>
+
+    <label>Parfum</label>
+    <select id="parfum">
+      <option value="">-- pilih parfum --</option>
+      <option value="Vanila">Vanila</option>
+      <option value="Lavender">Lavender</option>
+      <option value="Fresh">Fresh</option>
+    </select>
+  </section>
+
+  <!-- Actions -->
+  <section class="card actions">
+    <div class="left">
+      <button type="button" class="btn primary" id="buatNotaBtn">Tampilkan Nota</button>
+      <button type="button" class="btn" id="copyBtn">Copy Nota</button>
+    </div>
+  </section>
+
+  <!-- Nota -->
+  <section class="card">
+    <h3>Nota</h3>
+    <textarea id="notaText" rows="18" readonly></textarea>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  NUR LAUNDRY • Karangjati RT.05 • Telp 085878116420
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

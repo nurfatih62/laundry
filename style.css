@@ -55,36 +55,18 @@ input,textarea,select{
   box-sizing: border-box;
 }
 
-/* angka di kiri dan boleh kosong */
-input[type="number"]{
-  text-align: left;
-}
+input[type="number"]{ text-align: left; }
 
-/* FLEX ROW & COL */
-.row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+.row { display:flex; gap:10px; flex-wrap:wrap; }
+.col { flex:1 1 50%; min-width:140px; }
 
-.col {
-  flex: 1 1 50%;
-  min-width: 140px;
-}
+.table-wrap { overflow-x:auto; padding-bottom:8px; -webkit-overflow-scrolling: touch; }
 
-/* TABEL WRAP */
-.table-wrap {
-  overflow-x: auto; /* scroll horizontal jika sempit */
-  padding-bottom: 8px;
-  -webkit-overflow-scrolling: touch; /* smooth scroll iOS */
-}
-
-/* TABEL */
 table{
-  width: max-content; /* tabel menyesuaikan isi */
-  min-width: 800px; /* lebar minimal */
+  width: max-content;
+  min-width: 800px;
   border-collapse:collapse;
-  table-layout: auto;
+  table-layout:auto;
 }
 
 th, td{
@@ -92,7 +74,7 @@ th, td{
   border:1px solid #e6eef8;
   text-align:center;
   font-size:14px;
-  white-space: nowrap; /* teks tidak pecah baris */
+  white-space: nowrap;
 }
 
 #tabelKiloan td input, #tabelKiloan td select,
@@ -102,22 +84,15 @@ th, td{
   padding:8px;
   border-radius:6px;
   border:1px solid #d1d9e6;
-  box-sizing: border-box;
+  box-sizing:border-box;
 }
 
-/* Kolom penting kiri tetap terbaca */
 #tabelKiloan td:nth-child(1), #tabelKiloan td:nth-child(2),
-#tabelSatuan td:nth-child(1) {
-  text-align: left;
-  padding-left: 12px;
-  min-width: 140px;
-}
+#tabelSatuan td:nth-child(1) { text-align:left; padding-left:12px; min-width:140px; }
 
-/* Kolom angka */
 #tabelKiloan td:nth-child(3), #tabelKiloan td:nth-child(4), #tabelKiloan td:nth-child(5),
 #tabelSatuan td:nth-child(2), #tabelSatuan td:nth-child(3), #tabelSatuan td:nth-child(4){
-  min-width: 80px;
-  text-align: center;
+  min-width:80px; text-align:center;
 }
 
 #tabelKiloan td button, #tabelSatuan td button{
@@ -129,7 +104,6 @@ th, td{
   cursor:pointer;
 }
 
-/* CONTROLS & ACTIONS */
 .controls,.actions{
   display:flex;
   justify-content:space-between;
@@ -157,12 +131,8 @@ th, td{
   margin-top:18px;
 }
 
-/* INPUT TOTAL & SISA - desktop */
-input#total, input#sisa {
-  max-width:180px;
-}
+input#total, input#sisa { max-width:180px; }
 
-/* PAKET LAUNDRY - compact */
 .paket-group{
   display:flex;
   flex-wrap: wrap;
@@ -170,7 +140,7 @@ input#total, input#sisa {
   margin-top:6px;
 }
 
-.paket-group label, .paket-btn{
+.paket-group button{
   display:flex;
   align-items:center;
   justify-content:center;
@@ -184,61 +154,23 @@ input#total, input#sisa {
   transition: background 0.2s;
 }
 
-.paket-group input[type="checkbox"]{
-  transform: scale(1.1);
-  cursor:pointer;
-}
+.paket-group button:hover{ background:#d1d1d1; }
+.paket-btn.active{ background:#5c6975; color:#fff; }
 
-.paket-group label:hover, .paket-btn:hover{
-  background:#d1d1d1;
-}
-
-.paket-btn.active{
-  background:#5c6975;
-  color:#fff;
-}
-
-/* RESPONSIVE HP */
 @media(max-width:600px){
-  .row {
-    flex-direction: column;
-  }
-  .col {
-    width: 100%;
-  }
-  input[type="number"], input, select, textarea {
-    width:100%;
-  }
-  table th, table td {
-    font-size: 13px;
-    padding: 6px;
-  }
-  .btn {
-    padding: 6px 10px;
-    font-size: 13px;
-  }
-  .controls, .actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .paket-group{
-    gap:4px;
-  }
-  .paket-group label, .paket-btn{
-    padding:3px 5px;
-    font-size:11px;
-  }
-
-  #tabelKiloan, #tabelSatuan {
-    min-width: 900px; /* lebih luas di HP */
-  }
+  .row { flex-direction: column; }
+  .col { width:100%; }
+  input[type="number"], input, select, textarea { width:100%; }
+  table th, table td { font-size:13px; padding:6px; }
+  .btn { padding:6px 10px; font-size:13px; }
+  .controls, .actions { flex-direction: column; align-items:stretch; }
+  .paket-group{ gap:4px; }
+  .paket-group button{ padding:3px 5px; font-size:11px; }
+  #tabelKiloan, #tabelSatuan { min-width:100%; }
   #tabelKiloan td:nth-child(1), #tabelKiloan td:nth-child(2),
-  #tabelSatuan td:nth-child(1){
-    min-width: 160px;
-  }
+  #tabelSatuan td:nth-child(1){ min-width:140px; }
   #tabelKiloan td:nth-child(3), #tabelKiloan td:nth-child(4), #tabelKiloan td:nth-child(5),
   #tabelSatuan td:nth-child(2), #tabelSatuan td:nth-child(3), #tabelSatuan td:nth-child(4){
-    min-width: 90px;
+    min-width:80px;
   }
 }

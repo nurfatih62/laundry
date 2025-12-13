@@ -356,6 +356,9 @@ function cetakNota(){
   const nama = document.getElementById('nama').value.trim();
   if(nama) lines.push(`Pelanggan  : ${nama}`);
 
+  const kasir = document.getElementById('kasir').value.trim();
+  if(kasir) lines.push(`Kasir      : ${kasir}`);
+
   const tglMasuk = document.getElementById('tglMasuk').value;
   if(tglMasuk) lines.push(`Tgl Masuk  : ${tglMasuk}`);
 
@@ -365,14 +368,17 @@ function cetakNota(){
   const paket = selectedPaket || "";
   if(paket) lines.push(`paket      : ${paket}`);
 
+  const alamat = document.getElementById('alamat').value.trim();
+  if(alamat) lines.push(`Alamat/Telp: ${alamat}`);
+
   lines.push("--------------------------------");
 
   // ----------- KILOAN -----------  
   const kiloRows = document.querySelectorAll('#tabelKiloan tbody tr');
   if(kiloRows.length > 0){
-    let hasKiloan = false;
+    lines.push("KILOAN");
+    lines.push("Jenis       Kg   Harga   Total");
     let lastKategori = "";
-    let kiloLines = [];
     kiloRows.forEach(tr=>{
       const kategori = tr.querySelector('td:nth-child(1) select').value;
       const jenis = tr.querySelector('td:nth-child(2) select').value;
@@ -380,30 +386,24 @@ function cetakNota(){
       const harga = Number(tr.querySelector('td:nth-child(4) input').value) || 0;
       const total = Number(tr.querySelector('td:nth-child(5) input').value) || 0;
 
-      if(total>0){ // hanya tampilkan yang ada harga
-        hasKiloan = true;
+      if(total>0){
         if(kategori && kategori !== lastKategori){
-          kiloLines.push(`-${kategori}`);
+          lines.push(`-${kategori}`);
           lastKategori = kategori;
         }
         if(jenis){
-          kiloLines.push(`${jenis.padEnd(11)} ${kg}kg  ${formatRibuan(harga).padEnd(7)} ${formatRibuan(total)}`);
+          lines.push(`${jenis.padEnd(11)} ${kg}kg  ${formatRibuan(harga).padEnd(7)} ${formatRibuan(total)}`);
         }
       }
     });
-    if(hasKiloan){
-      lines.push("KILOAN");
-      lines.push("Jenis       Kg   Harga   Total");
-      lines.push(...kiloLines);
-      lines.push("--------------------------------");
-    }
+    lines.push("--------------------------------");
   }
 
   // ----------- SATUAN -----------  
   const satuRows = document.querySelectorAll('#tabelSatuan tbody tr');
   if(satuRows.length > 0){
-    let hasSatuan = false;
-    let satuLines = [];
+    lines.push("SATUAN");
+    lines.push("Item        Pot Harga   Total");
     satuRows.forEach(tr=>{
       const item = tr.querySelector('td:nth-child(1) select').value;
       const qty = tr.querySelector('td:nth-child(2) input').value || 0;
@@ -411,25 +411,34 @@ function cetakNota(){
       const total = Number(tr.querySelector('td:nth-child(4) input').value) || 0;
 
       if(total>0){
-        hasSatuan = true;
-        satuLines.push(`${item.padEnd(12)} ${qty.toString().padEnd(4)} ${formatRibuan(harga).padEnd(7)} ${formatRibuan(total)}`);
+        lines.push(`${item.padEnd(12)} ${qty.toString().padEnd(3)} ${formatRibuan(harga).padEnd(7)} ${formatRibuan(total)}`);
       }
     });
-    if(hasSatuan){
-      lines.push("SATUAN");
-      lines.push("Item        Pot   Harga   Total");
-      lines.push(...satuLines);
-      lines.push("--------------------------------");
-    }
+    lines.push("--------------------------------");
   }
 
   // ----------- BIAYA LAIN -----------  
+  const ongkir = Number(document.getElementById('ongkir').value) || 0;
+  if(ongkir>0) lines.push(`Biaya Ongkir : ${formatRibuan(ongkir)}`);
+
+  const hutang = Number(document.getElementById('hutangSebelumnya').value) || 0;
+  if(hutang>0) lines.push(`BB Sebelumnya: ${formatRibuan(hutang)}`);
+
+  const saldo = Number(document.getElementById('saldo').value) || 0;
+  if(saldo>0) lines.push(`Saldo/DP     : ${formatRibuan(saldo)}`);
+
   const totalHarga = Number(document.getElementById('total').value)||0;
   const kurang = Number(document.getElementById('sisa').value)||0;
   if(totalHarga>0){
     lines.push(`Total Harga  : ${formatRibuan(totalHarga)}`);
     lines.push(`Kurang       : ${formatRibuan(kurang)}`);
   }
+
+  const parfum = document.getElementById('parfum').value.trim();
+  if(parfum) lines.push(`Parfum       : ${parfum}`);
+
+  const catatan = document.getElementById('keterangan').value.trim();
+  if(catatan) lines.push(`Catatan      : ${catatan}`);
 
   lines.push("--------------------------------");
   lines.push("Setiap pengambilan dimohon");
@@ -438,15 +447,3 @@ function cetakNota(){
 
   document.getElementById('notatexs').value = lines.join('\n');
 }
-
-// ================= COPY NOTA =================
-document.getElementById('copyBtn')?.addEventListener('click', ()=>{
-  const notatexs = document.getElementById('notatexs');
-  if(notatexs){
-    notatexs.select();
-    notatexs.setSelectionRange(0, 99999); // mobile
-    navigator.clipboard.writeText(notatexs.value)
-      .then(()=>alert('Nota berhasil disalin!'))
-      .catch(()=>alert('Gagal menyalin nota'));
-  }
-});

@@ -2,14 +2,14 @@
 const dataPaket = {
   "REGULER-2H": {
     "CUCI & SETRIKA": {
-      "Pakaian Dewasa": 5500,
-      "Pakaian Anak": 6500,
-      "Pakaian Dalam": 8000,
-      "Pakaian Bayi": 8000,
+      "P.Dewasa": 5500,
+      "P.Anak": 6500,
+      "P.Dalam": 8000,
+      "P.Bayi": 8000,
       "Hijab Tipis": 8000,
-      "Jaket Tebal": 7000,
-      "Jumper Tebal": 7000,
-      "Sweater Tebal": 7000,
+      "Jaket": 7000,
+      "Jumper": 7000,
+      "Suwiter.T": 7000,
       "Handuk": 7000,
       "Sajadah": 7000,
       "Seprai+Sb": 11000,
@@ -20,13 +20,14 @@ const dataPaket = {
       "Gordyn": 16000
     },
     "CUCI & LIPAT": {
-      "Pakaian Dewasa": 4500,
-      "Pakaian Anak": 5500,
-      "Pakaian Dalam": 7000,
-      "Pakaian Bayi": 7000,
+      "P.Dewasa": 4500,
+      "P.Anak": 5500,
+      "P.Dalam": 7000,
+      "P.Bayi": 7000,
       "Hijab Tipis": 7000,
-      "Jaket Tebal": 6000,
-      "Jumper Tebal": 6000,
+      "Jaket": 6000,
+      "Jumper": 6000,
+      "Suwiter.T": 6000,
       "Handuk": 6000,
       "Sajadah": 6000,
       "Seprai+Sb": 10000,
@@ -34,45 +35,45 @@ const dataPaket = {
       "Sleeping Bag": 12000
     },
     "SETRIKA SAJA": {
-      "Pakaian Dewasa": 4500,
-      "Pakaian Anak": 5500,
-      "Pakaian Bayi": 7000,
+      "P.Dewasa": 4500,
+      "P.Anak": 5500,
+      "P.Bayi": 7000,
       "Hijab Tipis": 7000,
       "Seprai+Sb": 6000
     }
   },
   "REGULER-3H": {
     "CUCI & SETRIKA": {
-      "Pakaian Dewasa": 5500,
-      "Pakaian Anak": 6500,
-      "Pakaian Dalam": 8000,
-      "Pakaian Bayi": 8000,
+      "P.Dewasa": 5500,
+      "P.Anak": 6500,
+      "P.Dalam": 8000,
+      "P.Bayi": 8000,
       "Hijab Tipis": 8000
     },
     "CUCI & LIPAT": {
-      "Pakaian Dewasa": 4500,
-      "Pakaian Anak": 5500,
-      "Pakaian Dalam": 7000,
-      "Pakaian Bayi": 7000,
+      "P.Dewasa": 4500,
+      "P.Anak": 5500,
+      "P.Dalam": 7000,
+      "P.Bayi": 7000,
       "Hijab Tipis": 7000
     },
     "SETRIKA SAJA": {
-      "Pakaian Dewasa": 4500,
-      "Pakaian Anak": 5500,
-      "Pakaian Bayi": 7000,
+      "P.Dewasa": 4500,
+      "P.Anak": 5500,
+      "P.Bayi": 7000,
       "Hijab Tipis": 7000
     }
   },
   "EKSPRESS-1H": {
     "CUCI & SETRIKA": {
-      "Pakaian Dewasa": 7000,
-      "Pakaian Anak": 8000,
-      "Pakaian Dalam": 10000,
-      "Pakaian Bayi": 10000,
+      "P.Dewasa": 7000,
+      "P.Anak": 8000,
+      "P.Dalam": 10000,
+      "P.Bayi": 10000,
       "Hijab Tipis": 10000,
-      "Jaket Tebal": 9000,
-      "Jumper Tebal": 9000,
-      "Sweater Tebal": 9000,
+      "Jaket": 9000,
+      "Jumper": 9000,
+      "Suwiter.T": 9000,
       "Handuk": 8000,
       "Sajadah": 7000,
       "Seprai+Sb": 13000,
@@ -80,13 +81,14 @@ const dataPaket = {
       "Sleeping Bag": 16000
     },
     "CUCI & LIPAT": {
-      "Pakaian Dewasa": 6000,
-      "Pakaian Anak": 7000,
-      "Pakaian Dalam": 8000,
-      "Pakaian Bayi": 8000,
+      "P.Dewasa": 6000,
+      "P.Anak": 7000,
+      "P.Dalam": 8000,
+      "P.Bayi": 8000,
       "Hijab Tipis": 8000,
-      "Jaket Tebal": 8000,
-      "Jumper Tebal": 8000,
+      "Jaket": 8000,
+      "Jumper": 8000,
+      "Suwiter.T": 8000,
       "Handuk": 7000,
       "Sajadah": 7000,
       "Seprai+Sb": 11000,
@@ -94,22 +96,22 @@ const dataPaket = {
       "Sleeping Bag": 13000
     },
     "SETRIKA SAJA": {
-      "Pakaian Dewasa": 6000,
-      "Pakaian Anak": 7000,
-      "Pakaian Bayi": 8000,
+      "P.Dewasa": 6000,
+      "P.Anak": 7000,
+      "P.Bayi": 8000,
       "Hijab Tipis": 8000,
       "Seprai+Sb": 7000
     }
   },
   "KILAT-8J": {
     "CUCI & SETRIKA": {
-      "Pakaian Dewasa": 11000,
-      "Pakaian Anak": 14000,
+      "P.Dewasa": 11000,
+      "P.Anak": 14000,
       "Hijab Tipis": 16000
     },
     "SETRIKA SAJA": {
-      "Pakaian Dewasa": 9000,
-      "Pakaian Anak": 11000,
+      "P.Dewasa": 9000,
+      "P.Anak": 11000,
       "Hijab Tipis": 14000
     }
   }
@@ -149,16 +151,11 @@ window.addEventListener('load', ()=>{
     });
   });
 
-  // ----------------- INI BAGIAN BARU -----------------
-  tglMasuk.addEventListener('change', ()=>{
-    cekPaketOtomatis();  // otomatis tetap cek paket walau tgl masuk berubah
-  });
-
+  tglMasuk.addEventListener('change', ()=>{ cekPaketOtomatis(); });
   tglJadi.addEventListener('change', ()=>{
     manualTanggal = true;
-    cekPaketOtomatis();  // pastikan tombol paket menyesuaikan saat manual
+    cekPaketOtomatis();
   });
-  // ----------------------------------------------------
 });
 
 // ================= PAKET =================
@@ -197,33 +194,35 @@ function updateTanggalEstimasi(paketText){
   tglJadiEl.value = estimasi.toISOString().split('T')[0];
 }
 
-// ================= TANGGAL OTOMATIS / CEK PAKET =================
+// ================= CEK PAKET OTOMATIS =================
 function cekPaketOtomatis(){
-  const tglMasukEl = document.getElementById('tglMasuk');
-  const tglJadiEl = document.getElementById('tglJadi');
-  if(!tglMasukEl || !tglJadiEl) return;
+  if(manualTanggal){
+    const tglMasuk = new Date(document.getElementById('tglMasuk').value);
+    const tglJadi = new Date(document.getElementById('tglJadi').value);
+    if(isNaN(tglMasuk) || isNaN(tglJadi)) return;
 
-  const masuk = new Date(tglMasukEl.value);
-  const estimasi = new Date(tglJadiEl.value);
-  if(isNaN(masuk) || isNaN(estimasi)) return;
+    let diff = Math.ceil((tglJadi - tglMasuk)/ (1000*60*60*24));
+    if(diff < 0) diff = 0; // jika tanggal estimasi sebelum masuk
 
-  const diffDays = Math.round((estimasi - masuk)/(1000*60*60*24));
+    document.querySelectorAll('.paket-btn').forEach(b => b.classList.remove('active'));
 
-  // reset semua tombol
-  document.querySelectorAll('.paket-btn').forEach(b=>b.classList.remove('active'));
-
-  let btn = null;
-  if(diffDays <= 0) btn = document.getElementById('kilatBtn');      // hari sama
-  else if(diffDays === 1) btn = document.getElementById('cling');    // +1 hari
-  else if(diffDays === 2) btn = document.getElementById('hemat2');   // +2 hari
-  else if(diffDays >= 3) btn = document.getElementById('hemat3');    // +3 hari atau lebih
-
-  if(btn) {
-    btn.classList.add('active');
-    selectedPaket = btn.innerText;
-    updateHargaSemuaKiloan();
+    if(diff <= 0){ // hari sama dengan masuk
+      const el = document.getElementById('cling') || document.querySelector('.paket-btn[data-paket*="CLING"], .paket-btn[data-paket*="EKSPRESS"]');
+      if(el) { el.classList.add('active'); selectedPaket = el.innerText; }
+    } else if(diff == 1){
+      const el = document.getElementById('cling') || document.querySelector('.paket-btn[data-paket*="CLING"], .paket-btn[data-paket*="EKSPRESS"]');
+      if(el) { el.classList.add('active'); selectedPaket = el.innerText; }
+    } else if(diff == 2){
+      const el = document.getElementById('hemat2') || document.querySelector('.paket-btn[data-paket*="REGULER-2H"]');
+      if(el) { el.classList.add('active'); selectedPaket = el.innerText; }
+    } else { // diff >=3
+      const el = document.getElementById('hemat3') || document.querySelector('.paket-btn[data-paket*="REGULER-3H"]');
+      if(el) { el.classList.add('active'); selectedPaket = el.innerText; }
+    }
   }
+  updateHargaSemuaKiloan();
 }
+
 // ================= KILOAN =================
 function addKilo(){
   const tbody = document.querySelector('#tabelKiloan tbody');
@@ -240,12 +239,8 @@ function addKilo(){
   }
 
   tr.innerHTML = `
-    <td>
-      <select onchange="updateJenis(this)">${kategoriOptions}</select>
-    </td>
-    <td>
-      <select onchange="updateHarga(this)"><option value="">-- Pilih Jenis --</option></select>
-    </td>
+    <td><select onchange="updateJenis(this)">${kategoriOptions}</select></td>
+    <td><select onchange="updateHarga(this)"><option value="">-- Pilih Jenis --</option></select></td>
     <td><input type="number" min="0" oninput="updateTotalKilo(this)"></td>
     <td><input type="number" readonly></td>
     <td><input type="number" readonly></td>
@@ -253,7 +248,6 @@ function addKilo(){
   `;
 
   tbody.appendChild(tr);
-
   const kategoriSelect = tr.querySelector('td:nth-child(1) select');
   if(kategoriSelect.options.length > 1){
     kategoriSelect.value = kategoriSelect.options[1].value;
@@ -267,7 +261,6 @@ function updateJenis(el){
   const kategori = el.value;
   const paketKey = paketKeyFromText(selectedPaket || "REGULER-2H");
   jenisSelect.innerHTML = '<option value="">-- Pilih Jenis --</option>';
-
   if(paketKey && kategori && dataPaket[paketKey][kategori]){
     for(let j in dataPaket[paketKey][kategori]){
       jenisSelect.innerHTML += `<option value="${j}">${j}</option>`;
@@ -351,8 +344,9 @@ function hitungTotal(){
 // ================= NOTA =================
 function formatRibuan(x){ return Number(x).toLocaleString('id-ID'); }
 
+// ================= NOTA =================
 function cetakNota(){
-  hitungTotal(); // pastikan total terbaru
+  hitungTotal();
   let lines = [];
   lines.push("NUR LAUNDRY");
   lines.push("Karangjati RT. 05");
@@ -362,82 +356,80 @@ function cetakNota(){
   const nama = document.getElementById('nama').value.trim();
   if(nama) lines.push(`Pelanggan  : ${nama}`);
 
-  const kasir = document.getElementById('kasir').value.trim();
-  if(kasir) lines.push(`Kasir      : ${kasir}`);
-
   const tglMasuk = document.getElementById('tglMasuk').value;
   if(tglMasuk) lines.push(`Tgl Masuk  : ${tglMasuk}`);
 
   const tglJadi = document.getElementById('tglJadi').value;
   if(tglJadi) lines.push(`Est Selesai: ${tglJadi}`);
 
-  if(selectedPaket) lines.push(`Paket      : ${selectedPaket}`);
-
-  const alamat = document.getElementById('alamat').value.trim();
-  if(alamat) lines.push(`Alamat/Telp: ${alamat}`);
+  const paket = selectedPaket || "";
+  if(paket) lines.push(`paket      : ${paket}`);
 
   lines.push("--------------------------------");
 
-  // ----------- KILOAN -----------
+  // ----------- KILOAN -----------  
   const kiloRows = document.querySelectorAll('#tabelKiloan tbody tr');
-  if(kiloRows.length > 0 && Array.from(kiloRows).some(tr=>tr.querySelector('td:nth-child(2) select').value)){
-    lines.push("KILOAN");
-    lines.push("Jenis           Kg   Harga   Total");
+  if(kiloRows.length > 0){
+    let hasKiloan = false;
+    let lastKategori = "";
+    let kiloLines = [];
     kiloRows.forEach(tr=>{
+      const kategori = tr.querySelector('td:nth-child(1) select').value;
       const jenis = tr.querySelector('td:nth-child(2) select').value;
       const kg = tr.querySelector('td:nth-child(3) input').value || 0;
       const harga = Number(tr.querySelector('td:nth-child(4) input').value) || 0;
       const total = Number(tr.querySelector('td:nth-child(5) input').value) || 0;
-      if(jenis){
-        lines.push(
-          jenis.padEnd(15) + 
-          `${kg}kg`.padEnd(6) + 
-          formatRibuan(harga).padEnd(8) + 
-          formatRibuan(total)
-        );
+
+      if(total>0){ // hanya tampilkan yang ada harga
+        hasKiloan = true;
+        if(kategori && kategori !== lastKategori){
+          kiloLines.push(`-${kategori}`);
+          lastKategori = kategori;
+        }
+        if(jenis){
+          kiloLines.push(`${jenis.padEnd(11)} ${kg}kg  ${formatRibuan(harga).padEnd(7)} ${formatRibuan(total)}`);
+        }
       }
     });
-    lines.push("--------------------------------");
+    if(hasKiloan){
+      lines.push("KILOAN");
+      lines.push("Jenis       Kg   Harga   Total");
+      lines.push(...kiloLines);
+      lines.push("--------------------------------");
+    }
   }
 
-  // ----------- SATUAN -----------
+  // ----------- SATUAN -----------  
   const satuRows = document.querySelectorAll('#tabelSatuan tbody tr');
-  if(satuRows.length > 0 && Array.from(satuRows).some(tr=>tr.querySelector('td:nth-child(1) select').value)){
-    lines.push("SATUAN");
-    lines.push("Item           Pot   Harga   Total");
+  if(satuRows.length > 0){
+    let hasSatuan = false;
+    let satuLines = [];
     satuRows.forEach(tr=>{
-      const jenis = tr.querySelector('td:nth-child(1) select').value;
+      const item = tr.querySelector('td:nth-child(1) select').value;
       const qty = tr.querySelector('td:nth-child(2) input').value || 0;
       const harga = Number(tr.querySelector('td:nth-child(3) input').value) || 0;
       const total = Number(tr.querySelector('td:nth-child(4) input').value) || 0;
-      if(jenis){
-        lines.push(
-          jenis.padEnd(15) + 
-          `${qty}`.padEnd(6) + 
-          formatRibuan(harga).padEnd(8) + 
-          formatRibuan(total)
-        );
+
+      if(total>0){
+        hasSatuan = true;
+        satuLines.push(`${item.padEnd(12)} ${qty.toString().padEnd(4)} ${formatRibuan(harga).padEnd(7)} ${formatRibuan(total)}`);
       }
     });
-    lines.push("--------------------------------");
+    if(hasSatuan){
+      lines.push("SATUAN");
+      lines.push("Item        Pot   Harga   Total");
+      lines.push(...satuLines);
+      lines.push("--------------------------------");
+    }
   }
 
-  // ----------- BIAYA & LAINNYA -----------
-  const ongkir = Number(document.getElementById('ongkir').value) || 0;
-  const hutang = Number(document.getElementById('hutangSebelumnya').value) || 0;
-  const totalHarga = Number(document.getElementById('total').value) || 0;
-  const saldo = Number(document.getElementById('saldo').value) || 0;
-  const sisa = totalHarga - saldo;
-  const parfum = document.getElementById('parfum').value.trim();
-  const catatan = document.getElementById('keterangan').value.trim();
-
-  if(ongkir) lines.push(`Biaya Ongkir : ${formatRibuan(ongkir)}`);
-  if(hutang) lines.push(`BB Sebelumnya: ${formatRibuan(hutang)}`);
-  if(saldo) lines.push(`Saldo/DP     : ${formatRibuan(saldo)}`);
-  if(totalHarga) lines.push(`Total Harga  : ${formatRibuan(totalHarga)}`);
-  if(sisa) lines.push(`Kurang       : ${formatRibuan(sisa)}`);
-  if(parfum) lines.push(`Parfum       : ${parfum}`);
-  if(catatan) lines.push(`Catatan      : ${catatan}`);
+  // ----------- BIAYA LAIN -----------  
+  const totalHarga = Number(document.getElementById('total').value)||0;
+  const kurang = Number(document.getElementById('sisa').value)||0;
+  if(totalHarga>0){
+    lines.push(`Total Harga  : ${formatRibuan(totalHarga)}`);
+    lines.push(`Kurang       : ${formatRibuan(kurang)}`);
+  }
 
   lines.push("--------------------------------");
   lines.push("Setiap pengambilan dimohon");
@@ -446,3 +438,15 @@ function cetakNota(){
 
   document.getElementById('notatexs').value = lines.join('\n');
 }
+
+// ================= COPY NOTA =================
+document.getElementById('copyBtn')?.addEventListener('click', ()=>{
+  const notatexs = document.getElementById('notatexs');
+  if(notatexs){
+    notatexs.select();
+    notatexs.setSelectionRange(0, 99999); // mobile
+    navigator.clipboard.writeText(notatexs.value)
+      .then(()=>alert('Nota berhasil disalin!'))
+      .catch(()=>alert('Gagal menyalin nota'));
+  }
+});

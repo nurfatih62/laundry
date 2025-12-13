@@ -36,10 +36,10 @@
       <div class="col paket-container">
         <label>Pilih Paket</label>
         <div class="paket-group">
-          <label><input type="checkbox" id="kilat"> Kilat-8J</label>
-          <button type="button" class="paket-btn" data-hari="1" id="cling">Cling-1H</button>
-          <button type="button" class="paket-btn" data-hari="2" id="hemat2">Hemat-2H</button>
-          <button type="button" class="paket-btn" data-hari="3" id="hemat3">Hemat-3H</button>
+          <button type="button" class="paket-btn" id="kilatBtn">Kilat-8J</button>
+          <button type="button" class="paket-btn" id="cling">EKSPRESS-1H</button>
+          <button type="button" class="paket-btn" id="hemat2">REGULER-2H</button>
+          <button type="button" class="paket-btn" id="hemat3">REGULER-3H</button>
         </div>
       </div>
 
@@ -68,7 +68,9 @@
             <th></th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          <!-- Row awal akan otomatis ditambahkan via JS -->
+        </tbody>
       </table>
     </div>
     <div class="controls">
@@ -90,7 +92,9 @@
             <th></th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          <!-- Row awal akan otomatis ditambahkan via JS -->
+        </tbody>
       </table>
     </div>
     <div class="controls">
@@ -102,13 +106,13 @@
   <section class="card">
     <h3>Biaya & Pembayaran</h3>
     <label>Biaya Ongkir (Rp)</label>
-    <input id="ongkir" type="number" placeholder="">
+    <input id="ongkir" type="number">
 
     <label>BB Sebelumnya (Rp)</label>
-    <input id="hutangSebelumnya" type="number" placeholder="">
+    <input id="hutangSebelumnya" type="number">
 
     <label>Saldo/DP (Rp)</label>
-    <input id="saldo" type="number" placeholder="">
+    <input id="saldo" type="number">
 
     <div class="row">
       <div class="col">
@@ -141,7 +145,7 @@
   <!-- Nota -->
   <section class="card">
     <h3>Nota</h3>
-    <textarea id="notaText" rows="18" readonly></textarea>
+    <textarea id="notatexs" rows="18" readonly></textarea>
   </section>
 
 </main>

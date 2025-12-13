@@ -1,18 +1,19 @@
-// ================= DATA PAKET =================
+// ================= DATA PAKET SESUAI DAFTAR TERBARU =================
 const dataPaket = {
   "REGULER-2H": {
     "CUCI & SETRIKA": {
-      "P.Dewasa": 5500,
-      "P.Anak": 6500,
-      "P.Dalam": 8000,
-      "P.Bayi": 8000,
+      "Pakaian Dewasa": 5500,
+      "Pakaian Anak-anak": 6500,
+      "Pakaian Dalam": 8000,
+      "Pakaian Bayi": 8000,
       "Hijab Tipis": 8000,
-      "Jaket": 7000,
-      "Jumper": 7000,
-      "Suwiter.T": 7000,
+      "Jaket Jeans Tebal": 7000,
+      "Jumper Tebal": 7000,
+      "Sweater Tebal": 7000,
+      "Sweater.T": 7000,
       "Handuk": 7000,
       "Sajadah": 7000,
-      "Seprai+Sb": 11000,
+      "Seprai/Sarung Bantal": 11000,
       "Selimut": 12000,
       "Sleeping Bag": 13000,
       "Bed Cover": 13000,
@@ -20,103 +21,119 @@ const dataPaket = {
       "Gordyn": 16000
     },
     "CUCI & LIPAT": {
-      "P.Dewasa": 4500,
-      "P.Anak": 5500,
-      "P.Dalam": 7000,
-      "P.Bayi": 7000,
+      "Pakaian Dewasa": 4500,
+      "Pakaian Anak Kecil": 5500,
+      "Pakaian Dalam": 7000,
+      "Pakaian Bayi": 7000,
       "Hijab Tipis": 7000,
-      "Jaket": 6000,
-      "Jumper": 6000,
-      "Suwiter.T": 6000,
+      "Jaket Jeans Tebal": 6000,
+      "Jaket/Jumper Tebal": 6000,
       "Handuk": 6000,
       "Sajadah": 6000,
-      "Seprai+Sb": 10000,
+      "Seprai/Sarung Bantal": 10000,
       "Selimut": 11000,
       "Sleeping Bag": 12000
     },
     "SETRIKA SAJA": {
-      "P.Dewasa": 4500,
-      "P.Anak": 5500,
-      "P.Bayi": 7000,
+      "Pakaian Dewasa": 4500,
+      "Pakaian Anak-anak": 5500,
+      "Pakaian Bayi": 7000,
       "Hijab Tipis": 7000,
-      "Seprai+Sb": 6000
+      "Seprai/Sarung Bantal": 6000
     }
   },
   "REGULER-3H": {
     "CUCI & SETRIKA": {
-      "P.Dewasa": 5500,
-      "P.Anak": 6500,
-      "P.Dalam": 8000,
-      "P.Bayi": 8000,
-      "Hijab Tipis": 8000
+      "Pakaian Dewasa": 5500,
+      "Pakaian Anak-anak": 6500,
+      "Pakaian Dalam": 8000,
+      "Pakaian Bayi": 8000,
+      "Hijab Tipis": 8000,
+      "Jaket Jeans Tebal": 7000,
+      "Jumper Tebal": 7000,
+      "Sweater Tebal": 7000,
+      "Handuk": 7000,
+      "Sajadah": 7000,
+      "Seprai/Sarung Bantal": 11000,
+      "Selimut": 12000,
+      "Sleeping Bag": 13000,
+      "Bed Cover": 13000,
+      "Boneka": 15000,
+      "Gordyn": 16000
     },
     "CUCI & LIPAT": {
-      "P.Dewasa": 4500,
-      "P.Anak": 5500,
-      "P.Dalam": 7000,
-      "P.Bayi": 7000,
-      "Hijab Tipis": 7000
+      "Pakaian Dewasa": 4500,
+      "Pakaian Anak Kecil": 5500,
+      "Pakaian Dalam": 7000,
+      "Pakaian Bayi": 7000,
+      "Hijab Tipis": 7000,
+      "Jaket Jeans Tebal": 6000,
+      "Jaket/Jumper Tebal": 6000,
+      "Handuk": 6000,
+      "Sajadah": 6000,
+      "Seprai/Sarung Bantal": 10000,
+      "Selimut": 11000,
+      "Sleeping Bag": 12000
     },
     "SETRIKA SAJA": {
-      "P.Dewasa": 4500,
-      "P.Anak": 5500,
-      "P.Bayi": 7000,
-      "Hijab Tipis": 7000
+      "Pakaian Dewasa": 4500,
+      "Pakaian Anak-anak": 5500,
+      "Pakaian Bayi": 7000,
+      "Hijab Tipis": 7000,
+      "Seprai/Sarung Bantal": 6000
     }
   },
   "EKSPRESS-1H": {
     "CUCI & SETRIKA": {
-      "P.Dewasa": 7000,
-      "P.Anak": 8000,
-      "P.Dalam": 10000,
-      "P.Bayi": 10000,
+      "Pakaian Dewasa": 7000,
+      "Pakaian Anak-anak": 8000,
+      "Pakaian Dalam": 10000,
+      "Pakaian Bayi": 10000,
       "Hijab Tipis": 10000,
-      "Jaket": 9000,
-      "Jumper": 9000,
-      "Suwiter.T": 9000,
+      "Jaket Jeans Tebal": 9000,
+      "Jumper Tebal": 9000,
+      "Sweater Tebal": 9000,
       "Handuk": 8000,
       "Sajadah": 7000,
-      "Seprai+Sb": 13000,
+      "Seprai/Sarung Bantal": 13000,
       "Selimut": 15000,
       "Sleeping Bag": 16000
     },
     "CUCI & LIPAT": {
-      "P.Dewasa": 6000,
-      "P.Anak": 7000,
-      "P.Dalam": 8000,
-      "P.Bayi": 8000,
+      "Pakaian Dewasa": 6000,
+      "Pakaian Anak Kecil": 7000,
+      "Pakaian Dalam": 8000,
+      "Pakaian Bayi": 8000,
       "Hijab Tipis": 8000,
-      "Jaket": 8000,
-      "Jumper": 8000,
-      "Suwiter.T": 8000,
+      "Jaket Jeans Tebal": 8000,
+      "Jaket/Jumper Tebal": 8000,
       "Handuk": 7000,
       "Sajadah": 7000,
-      "Seprai+Sb": 11000,
+      "Seprai/Sarung Bantal": 11000,
       "Selimut": 12000,
       "Sleeping Bag": 13000
     },
     "SETRIKA SAJA": {
-      "P.Dewasa": 6000,
-      "P.Anak": 7000,
-      "P.Bayi": 8000,
+      "Pakaian Dewasa": 6000,
+      "Pakaian Anak-anak": 7000,
+      "Pakaian Bayi": 8000,
       "Hijab Tipis": 8000,
-      "Seprai+Sb": 7000
+      "Seprai/Sarung Bantal": 7000
     }
   },
   "KILAT-8J": {
     "CUCI & SETRIKA": {
-      "P.Dewasa": 11000,
-      "P.Anak": 14000,
+      "Pakaian Dewasa": 11000,
+      "Pakaian Anak-anak": 14000,
       "Hijab Tipis": 16000
     },
     "SETRIKA SAJA": {
-      "P.Dewasa": 9000,
-      "P.Anak": 11000,
+      "Pakaian Dewasa": 9000,
+      "Pakaian Anak-anak": 11000,
       "Hijab Tipis": 14000
     }
   }
 };
-
 // ================= DATA SATUAN =================
 const dataSatuan = {
   "Selimut": 15000,
@@ -447,3 +464,4 @@ function cetakNota(){
 
   document.getElementById('notatexs').value = lines.join('\n');
 }
+

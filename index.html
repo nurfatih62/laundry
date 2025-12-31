@@ -2,157 +2,248 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#1e293b" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <title>NUR LAUNDRY - Kasir</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="navbar">
-  <img src="logo.png" class="logo" alt="logo">
-  <div class="brand">NUR LAUNDRY</div>
+<!-- Header -->
+<header class="header">
+  <div class="header-left">
+    <img src="logo.png" class="logo" alt="logo" onerror="this.style.display='none'">
+    <div class="brand">
+      <span class="brand-name">NUR LAUNDRY</span>
+      <span class="brand-tagline">Kasir Digital</span>
+    </div>
+  </div>
+  <button class="header-btn" id="resetBtn" title="Reset">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+      <path d="M3 3v5h5"/>
+    </svg>
+  </button>
 </header>
 
-<main class="container">
+<main class="main">
 
-  <!-- Data Pelanggan -->
-  <section class="card">
-    <h3>Data Pelanggan</h3>
-    <label>Nama Pelanggan</label>
-    <input id="nama" type="text" placeholder="Nama pelanggan">
-
-    <label>Alamat / No HP</label>
-    <input id="alamat" type="text" placeholder="Alamat atau No HP">
-
-    <label>Nama Kasir</label>
-    <input id="kasir" type="text" placeholder="Nama kasir">
-
-    <div class="row">
-      <div class="col">
-        <label>Tanggal Masuk</label>
-        <input id="tglMasuk" type="date">
+  <!-- Section: Data Pelanggan -->
+  <section class="card" id="sectionPelanggan">
+    <div class="card-header" onclick="toggleSection('sectionPelanggan')">
+      <h3>Data Pelanggan</h3>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="input-group">
+        <label>Nama Pelanggan <span class="req">*</span></label>
+        <input id="nama" type="text" placeholder="Ketik nama..." autocomplete="off">
       </div>
 
-      <div class="col paket-container">
-        <label>Pilih Paket</label>
-        <div class="paket-group">
-          <button type="button" class="paket-btn" id="kilatBtn">Kilat-8J</button>
-          <button type="button" class="paket-btn" id="cling">EKSPRESS-1H</button>
-          <button type="button" class="paket-btn" id="hemat2">REGULER-2H</button>
-          <button type="button" class="paket-btn" id="hemat3">REGULER-3H</button>
+      <div class="input-group">
+        <label>No HP / Alamat</label>
+        <input id="alamat" type="text" placeholder="08xxx atau alamat..." autocomplete="off">
+      </div>
+
+      <div class="input-row">
+        <div class="input-group">
+          <label>Kasir</label>
+          <input id="kasir" type="text" placeholder="Nama kasir">
+        </div>
+        <div class="input-group">
+          <label>Parfum</label>
+          <select id="parfum">
+            <option value="">Pilih...</option>
+            <option value="Vanila">Vanila</option>
+            <option value="Lavender">Lavender</option>
+            <option value="Fresh">Fresh</option>
+            <option value="Sakura">Sakura</option>
+            <option value="Ocean">Ocean</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Paket & Tanggal -->
+  <section class="card" id="sectionPaket">
+    <div class="card-header" onclick="toggleSection('sectionPaket')">
+      <h3>Paket & Jadwal</h3>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <label class="label-sm">Pilih Paket</label>
+      <div class="paket-grid">
+        <button type="button" class="paket-btn" data-paket="KILAT-8J">
+          <span class="paket-icon">⚡</span>
+          <span class="paket-name">KILAT</span>
+          <span class="paket-time">8 Jam</span>
+        </button>
+        <button type="button" class="paket-btn" data-paket="EKSPRESS-1H">
+          <span class="paket-icon">🚀</span>
+          <span class="paket-name">EXPRESS</span>
+          <span class="paket-time">1 Hari</span>
+        </button>
+        <button type="button" class="paket-btn active" data-paket="REGULER-2H">
+          <span class="paket-icon">📦</span>
+          <span class="paket-name">REGULER</span>
+          <span class="paket-time">2 Hari</span>
+        </button>
+        <button type="button" class="paket-btn" data-paket="REGULER-3H">
+          <span class="paket-icon">🐢</span>
+          <span class="paket-name">HEMAT</span>
+          <span class="paket-time">3 Hari</span>
+        </button>
+      </div>
+
+      <div class="input-row mt-12">
+        <div class="input-group">
+          <label>Tgl Masuk</label>
+          <input id="tglMasuk" type="date">
+        </div>
+        <div class="input-group">
+          <label>Estimasi Selesai</label>
+          <input id="tglJadi" type="date">
+          <input id="jamJadi" type="time" class="mt-6 hidden">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Kiloan -->
+  <section class="card" id="sectionKiloan">
+    <div class="card-header" onclick="toggleSection('sectionKiloan')">
+      <h3>Laundry Kiloan</h3>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div id="listKiloan" class="item-list"></div>
+      <button type="button" class="btn-add" id="addKiloBtn">
+        <span>+</span> Tambah Kiloan
+      </button>
+    </div>
+  </section>
+
+  <!-- Section: Satuan -->
+  <section class="card" id="sectionSatuan">
+    <div class="card-header" onclick="toggleSection('sectionSatuan')">
+      <h3>Laundry Satuan</h3>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div id="listSatuan" class="item-list"></div>
+      <button type="button" class="btn-add" id="addSatuanBtn">
+        <span>+</span> Tambah Satuan
+      </button>
+    </div>
+  </section>
+
+  <!-- Section: Pembayaran -->
+  <section class="card" id="sectionBayar">
+    <div class="card-header" onclick="toggleSection('sectionBayar')">
+      <h3>Pembayaran</h3>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="input-row">
+        <div class="input-group">
+          <label>Ongkir</label>
+          <div class="input-prefix">
+            <span>Rp</span>
+            <input id="ongkir" type="number" inputmode="numeric" placeholder="0">
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Hutang Lama</label>
+          <div class="input-prefix">
+            <span>Rp</span>
+            <input id="hutangSebelumnya" type="number" inputmode="numeric" placeholder="0">
+          </div>
         </div>
       </div>
 
-      <div class="col">
-        <label>Estimasi Selesai</label>
-        <input id="tglJadi" type="date">
+      <div class="input-group">
+        <label>DP / Bayar Dimuka</label>
+        <div class="input-prefix">
+          <span>Rp</span>
+          <input id="saldo" type="number" inputmode="numeric" placeholder="0">
+        </div>
       </div>
-    </div>
 
-    <label>Catatan / Keterangan</label>
-    <textarea id="keterangan" placeholder="Catatan tambahan..."></textarea>
-  </section>
-
-  <!-- Kiloan -->
-  <section class="card">
-    <h3>Kiloan</h3>
-    <div class="table-wrap">
-      <table id="tabelKiloan">
-        <thead>
-          <tr>
-            <th>Kategori</th>
-            <th>Jenis</th>
-            <th>Kg</th>
-            <th>Harga/Kg</th>
-            <th>Total</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Row awal akan otomatis ditambahkan via JS -->
-        </tbody>
-      </table>
-    </div>
-    <div class="controls">
-      <button type="button" class="btn" id="addKiloBtn">Tambah Kiloan</button>
-    </div>
-  </section>
-
-  <!-- Satuan -->
-  <section class="card">
-    <h3>Satuan</h3>
-    <div class="table-wrap">
-      <table id="tabelSatuan">
-        <thead>
-          <tr>
-            <th>Jenis</th>
-            <th>Potong</th>
-            <th>Harga</th>
-            <th>Total</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Row awal akan otomatis ditambahkan via JS -->
-        </tbody>
-      </table>
-    </div>
-    <div class="controls">
-      <button type="button" class="btn" id="addSatuanBtn">Tambah Satuan</button>
-    </div>
-  </section>
-
-  <!-- Biaya & Pembayaran -->
-  <section class="card">
-    <h3>Biaya & Pembayaran</h3>
-    <label>Biaya Ongkir (Rp)</label>
-    <input id="ongkir" type="number">
-
-    <label>BB Sebelumnya (Rp)</label>
-    <input id="hutangSebelumnya" type="number">
-
-    <label>Saldo/DP (Rp)</label>
-    <input id="saldo" type="number">
-
-    <div class="row">
-      <div class="col">
-        <label>Total (Rp)</label>
-        <input id="total" type="number" readonly>
+      <div class="summary-box">
+        <div class="summary-row">
+          <span>Total</span>
+          <span class="summary-value" id="displayTotal">Rp 0</span>
+        </div>
+        <div class="summary-row summary-highlight">
+          <span>Sisa Bayar</span>
+          <span class="summary-value" id="displaySisa">Rp 0</span>
+        </div>
       </div>
-      <div class="col">
-        <label>Kurang (Rp)</label>
-        <input id="sisa" type="number" readonly>
-      </div>
-    </div>
 
-    <label>Parfum</label>
-    <select id="parfum">
-      <option value="">-- pilih parfum --</option>
-      <option value="Vanila">Vanila</option>
-      <option value="Lavender">Lavender</option>
-      <option value="Fresh">Fresh</option>
-    </select>
-  </section>
-
-  <!-- Actions -->
-  <section class="card actions">
-    <div class="left">
-      <button type="button" class="btn primary" id="buatNotaBtn">Tampilkan Nota</button>
-      <button type="button" class="btn" id="copyBtn">Copy Nota</button>
+      <input type="hidden" id="total">
+      <input type="hidden" id="sisa">
     </div>
   </section>
 
-  <!-- Nota -->
-  <section class="card">
-    <h3>Nota</h3>
-    <textarea id="notatexs" rows="18" readonly></textarea>
+  <!-- Section: Catatan -->
+  <section class="card" id="sectionCatatan">
+    <div class="card-header" onclick="toggleSection('sectionCatatan')">
+      <h3>Catatan</h3>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <textarea id="keterangan" rows="2" placeholder="Catatan tambahan (opsional)..."></textarea>
+    </div>
   </section>
+
+  <!-- Section: Nota -->
+  <section class="card" id="sectionNota">
+    <div class="card-header" onclick="toggleSection('sectionNota')">
+      <h3>Nota</h3>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div id="copyStatus" class="alert hidden"></div>
+      <textarea id="notatexs" rows="20" readonly placeholder="Klik tombol 'Buat Nota' untuk generate..."></textarea>
+    </div>
+  </section>
+
+  <div class="bottom-spacer"></div>
 
 </main>
 
-<footer class="site-footer">
-  NUR LAUNDRY • Karangjati RT.05 • Telp 085878116420
-</footer>
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+  <button type="button" class="nav-btn primary" id="buatNotaBtn">
+    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="16" y1="13" x2="8" y2="13"/>
+      <line x1="16" y1="17" x2="8" y2="17"/>
+    </svg>
+    <span>Buat Nota</span>
+  </button>
+  <button type="button" class="nav-btn" id="copyBtn">
+    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+    </svg>
+    <span>Copy</span>
+  </button>
+  <button type="button" class="nav-btn" id="shareBtn">
+    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <circle cx="18" cy="5" r="3"/>
+      <circle cx="6" cy="12" r="3"/>
+      <circle cx="18" cy="19" r="3"/>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+    </svg>
+    <span>Share WA</span>
+  </button>
+</nav>
 
 <script src="script.js"></script>
 </body>
